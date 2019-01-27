@@ -19,15 +19,24 @@ ToDoApp.prototype.renderUI = function() {
     appContainer.appendChild(this.buttonNode);
     appContainer.appendChild(this.listNode);
     this.buttonNode.addEventListener('click', this.addTaskToDo);
+
 }
+
 ToDoApp.prototype.addTaskToDo = function() {
     const inputValue = this.inputNode.value;
     const newTask = new Task(inputValue);
     this.tasksToDo.push(newTask);
+
     const newListElement = this.createNewListElement(newTask.text)
     this.listNode.appendChild(newListElement);
     this.inputNode.value = '';
+
 }
+
+ToDoApp.prototype.removeTaskToDo = function(event) {
+    event.target.parentNode.remove(t);
+}
+
 ToDoApp.prototype.createNewListElement = function(text) {
     const newListItem = document.createElement('li');
     const createRemoveIconElement = this.createRemoveIcon();
@@ -35,6 +44,7 @@ ToDoApp.prototype.createNewListElement = function(text) {
     newListItem.innerText = text;
     newListItem.appendChild(createRemoveIconElement);
     return newListItem;
+
 }
 
 ToDoApp.prototype.createRemoveIcon = function(){
@@ -45,10 +55,12 @@ ToDoApp.prototype.createRemoveIcon = function(){
     createRemoveIconElement.style.cursor = 'pointer';
     createRemoveIconElement.addEventListener('click', this.removeTaskToDo);
     return createRemoveIconElement;
+
 }
 
-function Task(text) {
+function Task(text, id) {
     this.text = text;
+    this,id = id;
 }
 const ToDoListApp = new ToDoApp();
 ToDoListApp.addTaskToDo = ToDoApp.prototype.addTaskToDo.bind(ToDoListApp)
