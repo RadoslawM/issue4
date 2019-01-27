@@ -1,0 +1,48 @@
+.header{
+    height: 150px;
+    background-color: gray;
+
+}
+.logo{
+    height: 100px;
+    line-height: 100px;
+    float: left;
+}
+.nav{
+    background-color: black;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    
+
+}
+.section{
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+}
+.footer{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    color: white;
+
+
+
+}
+.ramka{
+    height: 80px;
+    line-height: 80px;
+    float: left;
+}
+.link{
+    color: orange;
+    float: right;
+
+
+}

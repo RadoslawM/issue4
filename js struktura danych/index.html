@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        let games = ['Gothic1', 'Gothic2', 'Gothic3', 'Tomb Rider', 'Quake' ,'Serious Sam' ]
+        console.log(games);
+        console.log(games.length);
+
+        games.pop();
+        games.unshift('Unreal Turnament', 'Resident Evil');
+        games.push('Tekken 8');
+        games.shift();
+        console.log(games);
+
+        let names=['Arek', 'Darek', 'Czarek', 'Mariusz', 'Marek', 'Wiesław', 'Aneta', 'Stanisława'];
+        let fullName =names.map(name => {
+            if(name.slice(-1) === 'a'){
+                return `${name} Kowalska`;
+        }
+            return `${name} Kowalski`;
+
+        });
+        console.log(fullName);
+        fullName.forEach(fullName =>{
+            if(fullName.includes('rek')){
+                console.log(fullName);
+            }
+        });
+
+
+
+        const test = fullName.map(fullName => fullName.split (' ')[0])
+        .filter(firstName => firstName.length <6)
+        .reduce((prev, firstName) => prev + firstName.length, 0);
+        console.log(test);
+
+    </script>
+    
+</body>
+</html>

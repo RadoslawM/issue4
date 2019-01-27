@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <script>
+
+        const obj={name: 'Bob', age:33};
+
+        for(const prop in obj){
+            console.log(prop);
+        }
+
+        console.log(Object.entries(obj));
+
+        console.log(Object.keys(obj));
+
+        console.log(Object.values(obj));
+
+        // JSON script
+
+        const x = {name:'Kasia', age: 22};
+        console.log(JSON.stringify(x));
+
+        let a =(JSON.stringify(x));
+
+
+        console.log(JSON.parse('{"name":"Kasia", "age":22}'));
+
+        let e = JSON.parse(a);
+        console.log(e);
+
+
+        console.log(Math.round(2.7));
+        console.log(Math.floor(5.8));
+        console.log(Math.ceil(3.500));
+
+        //storage methods
+
+        localStorage.setItem('PC', 'Dell');
+        localStorage.setItem('Monitor','Bequ');
+        localStorage.setItem('keybord', 'Razer');
+        console.log(localStorage);
+
+        console.log(localStorage.getItem('PC'));
+
+        let person = {
+            name:'Radek', 
+            age: 28,
+            nationality: 'Polish'
+        
+        };
+        let personInString = JSON.stringify(person);
+        
+        console.log(JSON.stringify(person));
+
+        localStorage.setItem('person', personInString);
+
+        console.log(localStorage);
+
+        let parsePerson = JSON.parse(localStorage.getItem('person'));
+        console.log(parsePerson);
+
+        //map
+
+        const arr = ['Kasia', 'Magda', 'Natalia', 'Marta' , 'Marek'];
+        const res = arr.map(name => {
+            console.log(name); 
+            return (name +1);
+        })
+
+        console.log('res', res);
+
+        // method chaning
+
+    
+        const res2 = arr
+        .filter(name => name.charAt(0) === 'M')
+        .map(name => `${name} Kowalski`);
+
+        console.log(res2);
+
+
+
+
+    </script>
+    
+</body>
+</html>

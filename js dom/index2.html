@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+   let list=  document.createElement('ul');
+        let li1 = document.createElement('li');
+        li1.innerText='1';
+        let li2 = document.createElement('li');
+        li2.innerText='2';
+        let li3 = document.createElement('li');
+        li3.innerText='3';
+        
+        list.appendChild(li1);
+        list.appendChild(li2);
+        list.appendChild(li3);
+
+        document.body.appendChild(list);
+
+        li2.remove();
+        let li4= document.createElement('li');
+        li4.innerText='4';
+        list.replaceChild(li4,li3);
+
+            function replaceTagName(element, newTagName){
+                let newElement= document.createElement(newTagName);
+                newElement.innerHTML = element.innerHTML;
+
+                element.parentNode.replaceChild(newElement, element);
+
+        }
+        replaceTagName(list, 'ol');
+    </script>
+
+    
+</body>
+</html>

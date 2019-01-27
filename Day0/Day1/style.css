@@ -1,0 +1,42 @@
+.container {
+    margin: 0 auto;
+    width: 1150px;
+}
+
+.element {
+    background: gray;
+    color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.logo{
+    height: 100px;
+    line-height: 100px;
+}
+
+.baner {
+    height: 200px;
+    line-height: 200px;
+}
+
+.image {
+    display: inline-block;
+    line-height: 200px;
+    width: 200px;
+    vertical-align: top;
+}
+
+.text {
+    display: inline-block;
+    line-height: 40px;
+    width: 934px;
+    margin-left: 12px;
+    vertical-align: top;
+}
+
+.footer {
+    height: 50px;
+    line-height: 50px;
+}

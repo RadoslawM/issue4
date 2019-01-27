@@ -1,0 +1,108 @@
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .container{    
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .container{    
+        width: 1150px;
+    }
+}
+
+
+
+
+.element {
+    background: gray;
+    color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+
+.logo{
+    height: 6.25rem;
+    line-height: 6.25rem;
+}
+    
+
+.baner {
+    background-image: url('obrazek.jpg');
+    height: 50vh;
+    line-height: 12.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .baner{ 
+    background-image: url('obrazek2.jpg');   
+    
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .baner{ 
+    background-image: url('obrazek3.jpg');   
+    
+    }
+}
+    
+
+.image {
+    display: inline-block;
+    line-height: 12.5rem;
+    width: 100%;
+    vertical-align: top;
+    
+}
+
+
+@media only screen and (min-width: 768px) {
+    .image{    
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .image{    
+        width: 200px;
+    }
+}
+.image img{
+    width: 100%
+}
+
+
+
+.text {
+    display: inline-block;
+    line-height: 2.5rem;
+    width: 58.37rem;
+    margin-left: 0.375rem;
+    vertical-align: top;    
+}
+
+@media only screen and (min-width: 768px) {
+    .text{    
+        width: 47%;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .text{    
+        width: 58.37rem;
+    }
+}
+
+
+
+.footer {
+    height: 3.12rem;
+    line-height: 3.12rem;
+}

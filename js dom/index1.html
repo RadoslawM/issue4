@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>Hello World</div>
+    <script>
+        document.querySelector('div').innerText= '<p>Hello Świecie</p>'
+    </script>
+
+    <div>
+        <strong>2222</strong>
+    </div>
+    <script>
+        let s= document.querySelector('strong');
+        let span = document.createElement('span');
+        span.innerText='111';
+        s.parentElement.insertBefore(
+            span,
+            s
+        )
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.block-red{
+    color:white;
+    border-style:solid;
+    border-width: thick;
+    border-color:red;
+    border-
+    text-align: center;
+    background-color: red;
+}
+.block-green{
+    color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: green;
+    text-align: center;
+    background-color: green;  
+}
+.block-black{
+    color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    text-align: center;
+    background-color: black; 
+    margin-top: 10px;
+}

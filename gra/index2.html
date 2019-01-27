@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      background: url(https://www.themaincuprestaurant.com/wp-content/uploads/sites/483/2017/06/Brick-wall-background.jpg);
+      background-size: cover;
+      height: 100vh;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background-image: url(https://cdn0.iconfinder.com/data/icons/trade-1-2/48/34-512.png);
+      background-size: cover;
+      cursor: none;
+    }
+
+    span {
+      background-image: url(http://www.cprecisioncustomrifles.com/wp-content/uploads/2017/01/rifle-target-hole.png);
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      display: block;
+      position: absolute;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div>
+
+  </div>
+  <script>
+    const audio = new Audio('gun.mp3');
+    const cursor = document.querySelector('div')
+    document.addEventListener('mousemove', function (event) {
+      cursor.style.top = event.y - 50 + 'px';
+      cursor.style.left = event.x - 50 + 'px';
+    });
+    document.addEventListener('click', function (event) {
+      const s = document.createElement('span');
+      s.style.top = event.y - 15 + 'px';
+      s.style.left = event.x - 15 + 'px';
+      document.body.appendChild(s);
+      audio.play();
+      setTimeout(() => { audio.pause(); audio.currentTime = 0 }, 300);
+    });
+  </script>
+</body>
+
+</html>
