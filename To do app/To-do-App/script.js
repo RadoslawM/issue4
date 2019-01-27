@@ -30,9 +30,23 @@ ToDoApp.prototype.addTaskToDo = function() {
 }
 ToDoApp.prototype.createNewListElement = function(text) {
     const newListItem = document.createElement('li');
+    const createRemoveIconElement = this.createRemoveIcon();
+    
     newListItem.innerText = text;
+    newListItem.appendChild(createRemoveIconElement);
     return newListItem;
 }
+
+ToDoApp.prototype.createRemoveIcon = function(){
+    const createRemoveIconElement = document.createElement('span');
+    createRemoveIconElement.innerText = 'x';
+    createRemoveIconElement.style.fontSize = '20px';
+    createRemoveIconElement.style.color = 'red';
+    createRemoveIconElement.style.cursor = 'pointer';
+    createRemoveIconElement.addEventListener('click', this.removeTaskToDo);
+    return createRemoveIconElement;
+}
+
 function Task(text) {
     this.text = text;
 }
