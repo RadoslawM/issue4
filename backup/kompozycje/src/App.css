@@ -1,0 +1,39 @@
+
+
+.home{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.Text{
+  height: 10000px;
+}
+
+.Header{
+  background:  red;
+  position: relative;
+}
+
+.HeaderFixed{
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
